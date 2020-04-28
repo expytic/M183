@@ -35,7 +35,7 @@ CREATE TABLE `tobrunch` (
   `adresse` varchar(255) NOT NULL,
   `plzort` varchar(255) NOT NULL,
   `mailadr` varchar(255) DEFAULT NULL,
-  `gebdat` varchar(255) NOT NULL,
+  `gebdat` DATE NOT NULL,
   `numbadult` varchar(255) NOT NULL DEFAULT '0',
   `agechild1` varchar(255) DEFAULT '0',
   `agechild2` varchar(255) DEFAULT '0',

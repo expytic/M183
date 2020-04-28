@@ -5,6 +5,7 @@
 		<link rel="stylesheet" href="css/bootstrap.css">
 		<link rel="stylesheet" href="css/style.css">
 		<title>Anmeldeformular Brunch-Buffet</title>
+		<link rel="stylesheet" href="css/style.css">
 	</head>
  
 	<body>
