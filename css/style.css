@@ -1,64 +1,55 @@
-			body, button, a
-			{
-				margin: 10px auto;
-			}
-			
-			table, hr
-			{
-			}
-			
-			input
-			{
-				/*margin: 0 0 1em .2em;
-				
-				width: 50%;*/
-			}
-			
-			fieldset
-			{
-				border: 1px solid #336699;
-			}
-			
-			label
-			{ 
-			}
-			label::after
-			{
-				content: ": ";
-			}
- 
-			header, nav, main, article, section, aside, footer
-			{
-			}
- 
-			header
-			{
-			}
- 
-			nav
-			{
-				background: #fffbf0;
-				border-color: #e7c157;
-			}
- 
-			section
-			{
-			}
- 
-			main
-			{
-			}
- 
-			article
-			{
-				background: #F1F3F4;
-				border-color: #336699;
-			}
- 
-			aside
-			{
-			}
- 
-			footer
-			{
-			}
+body,
+button,
+a {
+    margin: 10px auto;
+}
+
+table,
+hr {}
+
+input {
+    margin: 0 0 1em .2em;
+    width: 50%;
+}
+
+fieldset {
+    border: 1px solid #336699;
+}
+
+label {
+    font-family: 'Roboto', sans-serif;
+}
+
+label::after {
+    content: ": ";
+}
+
+header,
+nav,
+main,
+article,
+section,
+aside,
+footer {
+    font-family: 'Roboto', sans-serif;
+}
+
+header {}
+
+nav {
+    background: #fffbf0;
+    border-color: #e7c157;
+}
+
+section {}
+
+main {}
+
+article {
+    background: #F1F3F4;
+    border-color: #336699;
+}
+
+aside {}
+
+footer {}

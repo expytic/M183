@@ -29,11 +29,11 @@
 						</tr>
 						<tr>
 							<td><label for="passw">Passwort</label></td>
-							<td><input type="password" name="passw" id="passw"></td>
+							<td><input  name="passw" id="passw"></td>
 						</tr>
 						<tr>
 							<td><label for="passwrep">Passwort wiederholen</label></td>
-							<td><input type="password" name="passwrep" id="passwrep"></td>
+							<td><input  name="passwrep" id="passwrep"></td>
 						</tr>
 					</table>
 					<fieldset>
