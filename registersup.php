@@ -29,19 +29,19 @@
 						</tr>
 						<tr>
 							<td><label for="passw">Passwort</label></td>
-							<td><input name="passw" id="passw"></td>
+							<td><input type="password" name="passw" id="passw"></td>
 						</tr>
 						<tr>
 							<td><label for="passwrep">Passwort wiederholen</label></td>
-							<td><input name="passwrep" id="passwrep"></td>
+							<td><input type="password" name="passwrep" id="passwrep"></td>
 						</tr>
 					</table>
 					<fieldset>
 						<table>
-							<legend>registrieren</legend>
-								<td><button type="submit" name="send" value="0">registrieren</button></td>
+							<legend></legend>
+								<td><button type="submit" name="send" value="0">Registrieren</button></td>
 								<td><button type="reset" name="send" value="0">neu ausfüllen</button></td>
-								<td><a href="index.php" titel="| zurück zur Startseite |">| zurück zur Startseite |</a></td>
+								<td><a href="index.php" titel=" | zurück zur Startseite |">| zurück zur Startseite |</a></td>
 							</tr>
 						</table>
 					</fieldset>
