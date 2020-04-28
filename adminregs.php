@@ -12,7 +12,7 @@
 					echo '</p>';
 					echo '<article>';
 				// Mit Datenbank verbinden 
-				$db = mysqli_connect('localhost', 'root', '', 'doppelklang'); 
+				$db = mysqli_connect('localhost', 'php_register_reader', 'Fr5x0kWY28wm9WvJ', 'doppelklang'); 
 				mysqli_set_charset($db, "utf8"); 
 				
 				// Anmeldungen aus der Datenbank abrufen

@@ -78,7 +78,7 @@
 										</select>
 									</label>
 								</td>		
-								<td>| <input type="checkbox" name="newsl">Newsletter bestellen |</label></td>
+								<td><input type="checkbox" name="newsl">Newsletter bestellen |</label></td>
 								<td><button type="submit" name="send" value="0">abschicken</button></td>
 								<td><button type="reset" name="send" value="0">neu ausfüllen</button></td>
 								<td><a href="index.php" titel="| zurück zur Startseite |">| zurück zur Startseite |</a></td>
