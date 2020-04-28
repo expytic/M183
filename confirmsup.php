@@ -14,7 +14,7 @@
 					
 					//Insert auf DB
 					// Create connection
-					$conn = mysqli_connect('localhost', 'root', '', 'doppelklang');
+					$conn = mysqli_connect('localhost', 'php_support', 'TgDId8ZQvkmpkyY7', 'doppelklang');
 					mysqli_set_charset($conn, "utf8");
 					// Check connection
 					if (!$conn)

@@ -22,7 +22,7 @@
 					
 					//Insert auf DB
 					// Create connection
-					$conn = mysqli_connect('localhost', 'root', '', 'doppelklang');
+					$conn = mysqli_connect('localhost', 'php_register_writer', 'uQR5KuiUIQptdlCG', 'doppelklang');
 					mysqli_set_charset($conn, "utf8");
 					// Check connection
 					if (!$conn)

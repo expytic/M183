@@ -30,13 +30,19 @@
   if (isset($_POST['submit'])) {
     if ($_POST['bestaetigen'] == 'Ja') {
       // Mit Datenbank verbinden
-      $db = mysqli_connect('localhost', 'root', '', 'doppelklang');      
+      $db = mysqli_connect('localhost', 'php_register_deleter', 'ghLj4BGZYbbY99Fz', 'doppelklang');      
       mysqli_set_charset($db, "utf8"); 
       // Den Eintrag aus der Datenbank löschen
-      $sql = "DELETE FROM tobrunch WHERE id = $id LIMIT 1";
-      mysqli_query($db, $sql);
+      $sql = 'DELETE FROM tobrunch WHERE id = '. $id . ' LIMIT 1;';
+      $result = mysqli_query($db, $sql);
       mysqli_close($db);
       // Dem Benutzer das Löschen bestätigen
+      if($result){
+        $result = "true";
+      }else{
+        $result = "false";
+      }
+      echo $result . '<br>';
       echo '<p>Die Anmeldung von '. $vorname . '&nbsp;' . $famname . ' vom ' . $entrydatetime . ' wurde gelöscht.</p>';
     }
     else {
