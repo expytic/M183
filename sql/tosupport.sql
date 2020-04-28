@@ -32,9 +32,9 @@ CREATE TABLE `tosupport` (
   `id` int(11) NOT NULL,
   `famname` varchar(50) NOT NULL,
   `vorname` varchar(50) NOT NULL,
-  `gebdat` varchar(50) NOT NULL,
-  `username` varchar(255) NOT NULL,
-  `password` varchar(255) NOT NULL,
+  `gebdat` DATE NOT NULL,
+  `username` varchar(20) NOT NULL,
+  `password` varchar(32) NOT NULL,
   `entrydatetime` datetime NOT NULL DEFAULT current_timestamp()
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
