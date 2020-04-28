@@ -21,7 +21,7 @@
 						</tr>
 						<tr>
 							<td><label for="gebdat">Geburtsdatum</label></td>
-							<td><input name="gebdat" id="gebdat"></td>
+							<td><input type="date" name="gebdat" id="gebdat"></td>
 						</tr>
 						<tr>
 							<td><label for="mail">E-Mail Adresse (=Username)</label></td>
