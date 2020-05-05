@@ -1,17 +1,19 @@
 <?php
+	if(isset($_SESSION['AdminPlus']) && $_SESSION['AdminPlus']){
+		header('Location: ./adminregs.php');
+	}
 	//E ingabe
 	$user = $_POST['user'];
 	$pass = $_POST['pass'];
-			
+	
 	//V erarbeitung
 	if ($user == "2kadminplus" && $pass == "2malklang")
 	{
-		header('Location: ./adminregs.php?login=true');
-		exit;
+		$_SESSION['AdminPlus'] = true;
+		header('Location: ./adminregs.php');
 	}
 		else
 	{
-		header('Location: ./adminregs.php?login=false');
-		exit;
+		header('Location: ./login-adminregs.php?');
 	}
 ?>

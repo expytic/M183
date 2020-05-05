@@ -1,12 +1,16 @@
 <?php
 	include "head.php";
+	if(isset($_SESSION['AdminPlus']) && $_SESSION['AdminPlus']){
+		header('Location: ./adminregs.php');
+		exit;
+	}
 ?>
 	<main>
 		<article>
 		<p>
 			<h4>Anmeldungen administrieren (nur mit AdminPlus-Login)</h4>
 		</p>	
-			<form name="login-showregs" action="checkadminregs.php" method="POST">
+			<form name="login-showregs" action="checkadminregs.php" method="GET">
 				<fieldset>
 					<table>
 						<legend>AdminPlus-Login</legend>

@@ -8,13 +8,13 @@
 			</p>
 			
 <?php
-  if (isset($_GET['id']) && isset($_GET['famname']) && isset($_GET['vorname']) && isset($_GET['mailadr']) && isset($_GET['entrydatetime'])) {
-    // Die Daten aus $_GET auslesen
-    $id = $_GET['id'];
-    $famname = $_GET['famname'];
-    $vorname = $_GET['vorname'];
-    $mailadr = $_GET['mailadr'];
-		$entrydatetime = $_GET['entrydatetime'];
+  if (isset($_POST['id']) && isset($_POST['famname']) && isset($_POST['vorname']) && isset($_POST['mailadr']) && isset($_POST['entrydatetime']) && isset($_SESSION['AdminPlus']) && $_SESSION['AdminPlus']) {
+    // Die Daten aus $_POST auslesen
+    $id = $_POST['id'];
+    $famname = $_POST['famname'];
+    $vorname = $_POST['vorname'];
+    $mailadr = $_POST['mailadr'];
+		$entrydatetime = $_POST['entrydatetime'];
   }
   else if (isset($_POST['id']) && isset($_POST['famname']) && isset($_POST['entrydatetime'])) {
     // Anmelde-Daten aus $_POST lesen

@@ -5,7 +5,8 @@
 			<p>
 				<h4>Music-Brunch mit Doppelklang - Anmeldungen administrieren</h4>
 			<?php
-				if ($_GET['login'] == 'true')
+				
+				if (isset($_SESSION['AdminPlus']) && $_SESSION['AdminPlus'])
 			{
 					echo '<h4>Sie sind jetzt eingeloggt</h4>';
 					echo '<h4>User: 2kadminplus</h4>';
@@ -27,9 +28,14 @@
 					echo "<td>" . $zeile['vorname'] . '</td>';
 					echo "<td>" . $zeile['mailadr'] . '</td>';
 					echo "<td>" . $zeile['entrydatetime'] . '</td>';
-					echo '<td><a href="deletereg.php?id=' . $zeile['id'] . '&amp;famname=' . $zeile['famname'] .
-						'&amp;vorname=' . $zeile['vorname'] . '&amp;mailadr=' . $zeile['mailadr'] . '&amp;entrydatetime=' .
-						$zeile['entrydatetime'] . '">Löschen</a></td></tr>';
+					echo '<td><form name="registersup" action="deletereg.php" method="POST">
+						<input type="hidden" id="id" name="id" value="' . $zeile['id'] . '">
+						<input type="hidden" id="famname" name="famname" value="' . $zeile['famname'] . '">
+						<input type="hidden" id="vorname" name="vorname" value="' . $zeile['vorname'] . '">
+						<input type="hidden" id="mailadr" name="mailadr" value="' . $zeile['mailadr'] . '">
+						<input type="hidden" id="entrydatetime" name="entrydatetime" value="' . $zeile['entrydatetime'] . '">
+						<button type="submit" name="send" value="0">abschicken</button>
+						</form></td></tr>';
 				}
 				echo '</table>';
 

@@ -2,12 +2,14 @@
 #nav {
     list-style-type: none;
     margin-top: -10px;
-    padding: 0;
+    padding: -20px;
     overflow: hidden;
     background-color: #333;
 }
 
-
+body{
+    padding-left: 20px;
+}
 
 li a {
     display: block;
@@ -18,5 +20,5 @@ li a {
 }
 
 li a:hover {
-    background-color: #111;
+    background-color: rgb(170, 169, 169);
 }

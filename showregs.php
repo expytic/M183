@@ -5,7 +5,8 @@
 			<p>
 				<h4>Music-Brunch mit Doppelklang - Anmeldungen anzeigen</h4>
 				<?php
-				if ($_GET['login'] == 'true')
+				echo $_SESSION['Admin'];
+				if (isset($_SESSION['Admin']) && $_SESSION['Admin'])
 				{
 					echo '<h4>Sie sind jetzt eingeloggt</h4>';
 					echo '<h4>User: 2klangadmin</h4>';

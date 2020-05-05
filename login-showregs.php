@@ -1,5 +1,9 @@
 <?php
 	include "head.php";
+	if(isset($_SESSION['Admin']) && $_SESSION['Admin']){
+		header('Location: ./showregs.php');
+		exit;
+	}
 ?>
 	<main>
 		<article>

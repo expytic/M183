@@ -32,7 +32,14 @@
 			</li>
 			<li class="nav-item active">
 				<a class="nav-link" href="#">Kontakt</a>
-			</li>
+            </li>
+            <?php
+				session_start();
+                if(isset($_SESSION['AdminPlus']) && $_SESSION['AdminPlus'] || isset($_SESSION['Admin']) && $_SESSION['Admin']){
+                    echo '<li class="nav-item active"><a class="nav-link" href="logout.php">Logout</a></li>';
+				}
+            ?>
+            
 </nav>
 		<header>
 			<h1>BigBand Doppelklang</h1>
