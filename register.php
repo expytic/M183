@@ -12,31 +12,31 @@
 						<legend><b>Anmeldeformular - </b>Persönliche Angaben:</legend>
 						<tr>
 							<td><label for="famname">Familienname</label></td>
-							<td><input name="famname" id="famname"></td>
+							<td><input name="famname" id="famname" required pattern="[a-zA-ZàáâäãåąčćęèéêëėįìíîïłńòóôöõøùúûüųūÿýżźñçčšžÀÁÂÄÃÅĄĆČĖĘÈÉÊËÌÍÎÏĮŁŃÒÓÔÖÕØÙÚÛÜŲŪŸÝŻŹÑßÇŒÆČŠŽ∂ð .-]{1,40}"></td>
 						</tr>
 						<tr>
 							<td><label for="vorname">Vorname</label></td>
-							<td><input name="vorname" id="vorname"></td>
+							<td><input name="vorname" id="vorname" required pattern="[a-zA-ZàáâäãåąčćęèéêëėįìíîïłńòóôöõøùúûüųūÿýżźñçčšžÀÁÂÄÃÅĄĆČĖĘÈÉÊËÌÍÎÏĮŁŃÒÓÔÖÕØÙÚÛÜŲŪŸÝŻŹÑßÇŒÆČŠŽ∂ð .-]{1,40}"></td>
 						</tr>	
 						<tr>
 							<td><label for="adresse">Strasse und Hausnr.</label></td>
-							<td><input name="adresse" id="adresse"></td>
+							<td><input name="adresse" id="adresse" required pattern="[a-zA-ZàáâäãåąčćęèéêëėįìíîïłńòóôöõøùúûüųūÿýżźñçčšžÀÁÂÄÃÅĄĆČĖĘÈÉÊËÌÍÎÏĮŁŃÒÓÔÖÕØÙÚÛÜŲŪŸÝŻŹÑßÇŒÆČŠŽ∂ð\ ]+\s\d{1,4}+[a-z]{0,1}"></td>
 						</tr>
 						<tr>
 							<td><label for="plz">PLZ</label></td>
-							<td><input name="plz" id="plz"></td>
+							<td><input name="plz" id="plz" required pattern="[0-9]{4}"></td>
 						</tr>
 						<tr>
 							<td><label for="ort">Ort</label></td>
-							<td><input name="ort" id="ort"></td>
+							<td><input name="ort" id="ort" required pattern="[a-zA-ZàáâäãåąčćęèéêëėįìíîïłńòóôöõøùúûüųūÿýżźñçčšžÀÁÂÄÃÅĄĆČĖĘÈÉÊËÌÍÎÏĮŁŃÒÓÔÖÕØÙÚÛÜŲŪŸÝŻŹÑßÇŒÆČŠŽ∂ð]+(?:[\s-][a-zA-ZàáâäãåąčćęèéêëėįìíîïłńòóôöõøùúûüųūÿýżźñçčšžÀÁÂÄÃÅĄĆČĖĘÈÉÊËÌÍÎÏĮŁŃÒÓÔÖÕØÙÚÛÜŲŪŸÝŻŹÑßÇŒÆČŠŽ∂ð]"></td>
 						</tr>
 						<tr>
 							<td><label for="mail">E-Mail Adresse</label></td>
-							<td><input name="mail" id="mail"></td>
+							<td><input name="mail" id="mail" required pattern="([a-zA-Z0-9_\-\.]+)@([a-zA-Z0-9_\-\.]+)\.([a-zA-Z]{2,5})"></td>
 						</tr>
 						<tr>
 							<td><label for="gebdat">Geburtsdatum</label></td>
-							<td><input type="date" name="gebdat" id="gebdat"></td>
+							<td><input type="date" name="gebdat" id="gebdat" required pattern="(19|20)\d\d[.](0[1-9]|1[012])[.](0[1-9]|[12][0-9]|3[01])"></td>
 						</tr>
 					</table>
 				</fieldset>
@@ -44,27 +44,27 @@
 					<table>
 						<legend>Anzahl Erwachsene und Kinder:</legend>
 							<tr>
-								<td><label for="famname"><b>Anzahl</b> Erwachsene</label></td>
-								<td><input name="numbadult" id="numbadult"></td>
+								<td><label for="numbadult"><b>Anzahl</b> Erwachsene</label></td>
+								<td><input name="numbadult" id="numbadult" required></td>
 							</tr>
 							<tr>
-								<td><label for="famname">Kind 1, bitte <b>Alter</b> angeben</label></td>
+								<td><label for="agechild1">Kind 1, bitte <b>Alter</b> angeben</label></td>
 								<td><input name="agechild1" id="agechild1"></td>
 							</tr>
 							<tr>
-								<td><label for="famname">Kind 2, bitte <b>Alter</b> angeben</label></td>
+								<td><label for="agechild2">Kind 2, bitte <b>Alter</b> angeben</label></td>
 								<td><input name="agechild2" id="agechild2"></td>
 							</tr>
 							<tr>
-								<td><label for="famname">Kind 3, bitte <b>Alter</b> angeben</label></td>
+								<td><label for="agechild3">Kind 3, bitte <b>Alter</b> angeben</label></td>
 								<td><input name="agechild3" id="agechild3"></td>
 							</tr>
 							<tr>
-								<td><label for="famname">Kind 4, bitte <b>Alter</b> angeben</label></td>
+								<td><label for="agechild4">Kind 4, bitte <b>Alter</b> angeben</label></td>
 								<td><input name="agechild4" id="agechild4"></td>
 							</tr>
 							<tr>
-								<td><label for="famname">Kind 5, bitte <b>Alter</b> angeben</label></td>
+								<td><label for="agechild5">Kind 5, bitte <b>Alter</b> angeben</label></td>
 								<td><input name="agechild5" id="agechild5"></td>
 							</tr>
 						</table>

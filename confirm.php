@@ -6,23 +6,57 @@
 			<article>
 				<?php
 					//Daten entgegennehmen
+					if(!isset($_GET['famname'])){
+						header('Location: register.php');
+					}
 					$famname = $_GET['famname'];
+					if(isset($_GET['vorname'])){
 					$vorname = $_GET['vorname'];
-					$adresse = $_GET['adresse'];
-					$plz = $_GET['plz'];
-					$ort = $_GET['ort'];
-					$mail = $_GET['mail'];
-					$gebdat = $_GET['gebdat'];
-					$numbadult = $_GET['numbadult'];
-					$agechild1 = $_GET['agechild1'];
-					$agechild2 = $_GET['agechild2'];
-					$agechild3 = $_GET['agechild3'];
-					$agechild4 = $_GET['agechild4'];
-					$agechild5 = $_GET['agechild5'];
-					$sector = $_GET['sector'];
-					$newsl = $_GET['newsl'];
-					
-					
+					}
+					if(isset($_GET['adresse'])){
+						$adresse = $_GET['adresse'];
+					}
+					if(isset($_GET['plz'])){
+						$plz = $_GET['plz'];
+					}
+					if(isset($_GET['ort'])){
+						$ort = $_GET['ort'];
+					}
+					if(isset($_GET['mail'])){
+						$mail = $_GET['mail'];
+					}
+					if(isset($_GET['mail'])){
+						$mail = $_GET['mail'];
+					}
+					if(isset($_GET['gebdat'])){
+						$gebdat = $_GET['gebdat'];
+					}
+					if(isset($_GET['gebnumbadultdat'])){
+						$numbadult = $_GET['numbadult'];
+					}
+					if(isset($_GET['agechild1'])){
+						$agechild1 = $_GET['agechild1'];
+					}
+					if(isset($_GET['agechild2'])){
+						$agechild2 = $_GET['agechild2'];
+					}
+					if(isset($_GET['agechild3'])){
+						$agechild3 = $_GET['agechild3'];
+					}
+					if(isset($_GET['agechild4'])){
+						$agechild4 = $_GET['agechild4'];
+					}
+					if(isset($_GET['agechild5'])){
+						$agechild5 = $_GET['agechild5'];
+					}
+					if(isset($_GET['sector'])){
+						$sector = $_GET['sector'];
+					}
+					if(isset($_GET['newsl'])){
+						$newsl = true;
+					}else{
+						$newsl = false;
+					}
 					if(!validateName($vorname)){
 						echo "$vorname not ok<br>";
 					}
@@ -65,11 +99,7 @@
 						echo "$agechild5 not ok<br>";
 					}
 					
-					if($newsl == 'on'){
-						$newsl = true;
-					}else{
-						$newsl = false;
-					}
+					
 					if($sector != 'vorne' && $sector != 'mitte' && $sector != 'hinten'){
 						echo "$sector not ok";
 					}
