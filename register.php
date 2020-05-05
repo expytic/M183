@@ -91,20 +91,17 @@
 					</fieldset>
 				</form>	
 			</article>
-			<aside>
 				<h4>Hinweise</h4>
 				<ul>
-					<li>Kosten CHF 35.-- pro Person.</li>
+					<li>Kosten CHF 35.-- pro Person.<br></li>
 					<li>Kinder bis 6 Jahre sind unsere Gäste und für Kinder von 7 bis 15 Jahre kostet der Brunch CHF 1.-- pro Lebensjahr.</li>
 					<li>Die Brunchgutscheine sind an der Tageskasse abzuholen und bar zu bezahlen.</li>
 				</ul>
-			</aside>
 		</main>
  
-		<footer>
-<hr>		
+		<footer>		
 			<a href="#kontakt.html">Kontakt</a>
-				<p>© 2020 Doppelklang / 03.2020 BigBand Doppelklang</p>
+			<p>© 2020 Doppelklang / 03.2020 BigBand Doppelklang</p>
 		</footer>
 	</body>
 </html>

@@ -1,57 +1,22 @@
-body,
-button,
-a {
-    margin: 10px auto;
+
+#nav {
+    list-style-type: none;
+    margin-top: -10px;
+    padding: 0;
+    overflow: hidden;
+    background-color: #333;
 }
 
-body {
-    background-color: black;
+
+
+li a {
+    display: block;
+    color: white;
     text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
 }
 
-table,
-hr {}
-
-input {
-    width: 100%;
+li a:hover {
+    background-color: #111;
 }
-
-fieldset {
-    border: 1px solid #336699;
-}
-
-label {
-    font-family: 'Roboto', sans-serif;
-}
-
-label::after {
-    content: ": ";
-}
-
-header,
-nav,
-main,
-article,
-section,
-aside,
-footer {
-    font-family: 'Roboto', sans-serif;
-    text-align: center;
-}
-
-header {
-    text-align: center;
-}
-
-section {}
-
-main {}
-
-article {
-    background: #F1F3F4;
-    border-color: #336699;
-}
-
-aside {}
-
-footer {}
