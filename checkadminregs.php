@@ -1,4 +1,5 @@
 <?php
+session_start();
 	if(isset($_SESSION['AdminPlus']) && $_SESSION['AdminPlus']){
 		header('Location: ./adminregs.php');
 	}
@@ -7,13 +8,10 @@
 	$pass = $_POST['pass'];
 	
 	//V erarbeitung
-	if ($user == "2kadminplus" && $pass == "2malklang")
-	{
+	if ($user == "2kadminplus" && $pass == "2malklang"){
 		$_SESSION['AdminPlus'] = true;
 		header('Location: ./adminregs.php');
-	}
-		else
-	{
-		header('Location: ./login-adminregs.php?');
+	}else{
+		header('Location: ./login-adminregs.php');
 	}
 ?>

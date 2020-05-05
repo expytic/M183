@@ -10,7 +10,7 @@
 		<p>
 			<h4>Anmeldungen administrieren (nur mit AdminPlus-Login)</h4>
 		</p>	
-			<form name="login-showregs" action="checkadminregs.php" method="GET">
+			<form name="login-showregs" action="checkadminregs.php" method="POST">
 				<fieldset>
 					<table>
 						<legend>AdminPlus-Login</legend>
