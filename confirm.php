@@ -6,70 +6,53 @@
 			<article>
 				<?php
 					//Daten entgegennehmen
-					if(!isset($_GET['famname'])){
+					if(!isset($_POST['famname'])){
 						header('Location: register.php');
 					}
-					if(!isset($_GET['vorname'])){
+					if(!isset($_POST['vorname'])){
 						header('Location: register.php');
 					}
-					if(!isset($_GET['adresse'])){
+					if(!isset($_POST['adresse'])){
 						header('Location: register.php');
 					}
-					if(!isset($_GET['plz'])){
+					if(!isset($_POST['plz'])){
 						header('Location: register.php');
 					}
-					if(!isset($_GET['ort'])){
+					if(!isset($_POST['ort'])){
 						header('Location: register.php');
 					}
-					if(!isset($_GET['mail'])){
+					if(!isset($_POST['mail'])){
 						header('Location: register.php');
 					}
-					if(!isset($_GET['mail'])){
+					if(!isset($_POST['gebdat'])){
 						header('Location: register.php');
 					}
-					if(!isset($_GET['gebdat'])){
+					if(!isset($_POST['numbadult'])){
 						header('Location: register.php');
 					}
-					if(!isset($_GET['gebnumbadultdat'])){
+
+					if(!isset($_POST['sector'])){
 						header('Location: register.php');
 					}
-					if(!isset($_GET['agechild1'])){
-						header('Location: register.php');
-					}
-					if(!isset($_GET['agechild2'])){
-						header('Location: register.php');
-					}
-					if(!isset($_GET['agechild3'])){
-						header('Location: register.php');
-					}
-					if(!isset($_GET['agechild4'])){
-						header('Location: register.php');
-					}
-					if(!isset($_GET['agechild5'])){
-						header('Location: register.php');
-					}
-					if(!isset($_GET['sector'])){
-						header('Location: register.php');
-					}
-					if(!isset($_GET['newsl'])){
+					if(isset($_POST['newsl'])){
 						$newsl = true;
 					}else{
 						$newsl = false;
 					}
-					$famname = $_GET['famname'];
-					$vorname = $_GET['vorname'];
-					$adresse = $_GET['adresse'];
-					$plz = $_GET['plz'];
-					$ort = $_GET['ort'];
-					$mail = $_GET['mail'];
-					$gebdat = $_GET['gebdat'];
-					$numbadult = $_GET['numbadult'];
-					$agechild1 = $_GET['agechild1'];
-					$agechild2 = $_GET['agechild2'];
-					$agechild3 = $_GET['agechild3'];
-					$agechild4 = $_GET['agechild4'];
-					$agechild5 = $_GET['agechild5'];
-					$sector = $_GET['sector'];
+					$famname = $_POST['famname'];
+					$vorname = $_POST['vorname'];
+					$adresse = $_POST['adresse'];
+					$plz = $_POST['plz'];
+					$ort = $_POST['ort'];
+					$mail = $_POST['mail'];
+					$gebdat = $_POST['gebdat'];
+					$numbadult = $_POST['numbadult'];
+					$agechild1 = $_POST['agechild1'];
+					$agechild2 = $_POST['agechild2'];
+					$agechild3 = $_POST['agechild3'];
+					$agechild4 = $_POST['agechild4'];
+					$agechild5 = $_POST['agechild5'];
+					$sector = $_POST['sector'];
 					if(!validateName($vorname)){
 						echo "$vorname not ok<br>";
 					}

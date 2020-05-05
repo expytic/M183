@@ -6,7 +6,7 @@
 		<p>
 			<h4>Hier können Sie sich zum Brunch-Buffet anmelden.</h4>
 		</p>	
-			<form name="register" action="confirm.php" method="GET">
+			<form name="register" action="confirm.php" method="POST">
 				<fieldset>
 					<table>
 						<legend><b>Anmeldeformular - </b>Persönliche Angaben:</legend>
@@ -20,7 +20,7 @@
 						</tr>	
 						<tr>
 							<td><label for="adresse">Strasse und Hausnr.</label></td>
-							<td><input name="adresse" id="adresse" required pattern="[a-zA-ZàáâäãåąčćęèéêëėįìíîïłńòóôöõøùúûüųūÿýżźñçčšžÀÁÂÄÃÅĄĆČĖĘÈÉÊËÌÍÎÏĮŁŃÒÓÔÖÕØÙÚÛÜŲŪŸÝŻŹÑßÇŒÆČŠŽ∂ð\ ]+\s\d{1,4}+[a-z]{0,1}"></td>
+							<td><input name="adresse" id="adresse" required pattern="[a-zA-ZàáâäãåąčćęèéêëėįìíîïłńòóôöõøùúûüųūÿýżźñçčšžÀÁÂÄÃÅĄĆČĖĘÈÉÊËÌÍÎÏĮŁŃÒÓÔÖÕØÙÚÛÜŲŪŸÝŻŹÑßÇŒÆČŠŽ∂ð\ ]+[ ]{1}+\d{1,4}+[a-z]{0,1}"></td>
 						</tr>
 						<tr>
 							<td><label for="plz">PLZ</label></td>
@@ -28,7 +28,7 @@
 						</tr>
 						<tr>
 							<td><label for="ort">Ort</label></td>
-							<td><input name="ort" id="ort" required pattern="[a-zA-ZàáâäãåąčćęèéêëėįìíîïłńòóôöõøùúûüųūÿýżźñçčšžÀÁÂÄÃÅĄĆČĖĘÈÉÊËÌÍÎÏĮŁŃÒÓÔÖÕØÙÚÛÜŲŪŸÝŻŹÑßÇŒÆČŠŽ∂ð]+(?:[\s-][a-zA-ZàáâäãåąčćęèéêëėįìíîïłńòóôöõøùúûüųūÿýżźñçčšžÀÁÂÄÃÅĄĆČĖĘÈÉÊËÌÍÎÏĮŁŃÒÓÔÖÕØÙÚÛÜŲŪŸÝŻŹÑßÇŒÆČŠŽ∂ð]"></td>
+							<td><input name="ort" id="ort" required pattern="[a-zA-ZàáâäãåąčćęèéêëėįìíîïłńòóôöõøùúûüųūÿýżźñçčšžÀÁÂÄÃÅĄĆČĖĘÈÉÊËÌÍÎÏĮŁŃÒÓÔÖÕØÙÚÛÜŲŪŸÝŻŹÑßÇŒÆČŠŽ∂ð]+(?:[\s-][a-zA-ZàáâäãåąčćęèéêëėįìíîïłńòóôöõøùúûüųūÿýżźñçčšžÀÁÂÄÃÅĄĆČĖĘÈÉÊËÌÍÎÏĮŁŃÒÓÔÖÕØÙÚÛÜŲŪŸÝŻŹÑßÇŒÆČŠŽ∂ð]{3,50}"></td>
 						</tr>
 						<tr>
 							<td><label for="mail">E-Mail Adresse</label></td>

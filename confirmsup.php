@@ -6,30 +6,30 @@
 			<article>
 				<?php
 					//Daten entgegennehmen
-					if(!isset($_GET['famname'])){
+					if(!isset($_POST['famname'])){
 						header('Location: registersup.php');
 					}
-					if(!isset($_GET['vorname'])){
+					if(!isset($_POST['vorname'])){
 						header('Location: registersup.php');
 					}
-					if(!isset($_GET['gebdat'])){
+					if(!isset($_POST['gebdat'])){
 						header('Location: registersup.php');
 					}
-					if(!isset($_GET['mail'])){
+					if(!isset($_POST['mail'])){
 						header('Location: registersup.php');
 					}
-					if(!isset($_GET['passw'])){
+					if(!isset($_POST['passw'])){
 						header('Location: registersup.php');
 					}
-					if(!isset($_GET['passwrep'])){
+					if(!isset($_POST['passwrep'])){
 						header('Location: registersup.php');
 					}
-					$famname = $_GET['famname'];
-					$vorname = $_GET['vorname'];
-					$gebdat = $_GET['gebdat'];
-					$username = $_GET['mail'];
-					$password = $_GET['passw'];
-					$passwrep = $_GET['passwrep'];
+					$famname = $_POST['famname'];
+					$vorname = $_POST['vorname'];
+					$gebdat = $_POST['gebdat'];
+					$username = $_POST['mail'];
+					$password = $_POST['passw'];
+					$passwrep = $_POST['passwrep'];
 					
 					if(!validateName($famname)){
 						echo "$famname not ok<br>";

@@ -7,33 +7,33 @@
 			<h4>Für 50 Franken pro Jahr wirst du Supporter von Doppelklang!</h4>
 			<h4>Du bekommst diverse Vergünstigungen und exklusive Zusatzinfos.</h4>
 		</p>	
-			<form name="registersup" action="confirmsup.php" method="GET">
+			<form name="registersup" action="confirmsup.php" method="POST">
 				<fieldset>
 					<table>
 						<legend><b>Registrierung als Supporter*in</b></legend>
 						<tr>
 							<td><label for="famname">Familienname</label></td>
-							<td><input name="famname" id="famname"></td>
+							<td><input name="famname" id="famname" required pattern="[a-zA-ZàáâäãåąčćęèéêëėįìíîïłńòóôöõøùúûüųūÿýżźñçčšžÀÁÂÄÃÅĄĆČĖĘÈÉÊËÌÍÎÏĮŁŃÒÓÔÖÕØÙÚÛÜŲŪŸÝŻŹÑßÇŒÆČŠŽ∂ð .-]{1,40}"></td>
 						</tr>
 						<tr>
 							<td><label for="vorname">Vorname</label></td>
-							<td><input name="vorname" id="vorname"></td>
+							<td><input name="vorname" id="vorname" required pattern="[a-zA-ZàáâäãåąčćęèéêëėįìíîïłńòóôöõøùúûüųūÿýżźñçčšžÀÁÂÄÃÅĄĆČĖĘÈÉÊËÌÍÎÏĮŁŃÒÓÔÖÕØÙÚÛÜŲŪŸÝŻŹÑßÇŒÆČŠŽ∂ð .-]{1,40}"></td>
 						</tr>
 						<tr>
 							<td><label for="gebdat">Geburtsdatum</label></td>
-							<td><input type="date" name="gebdat" id="gebdat"></td>
+							<td><input type="date" name="gebdat" id="gebdat" required></td>
 						</tr>
 						<tr>
 							<td><label for="mail">E-Mail Adresse (=Username)</label></td>
-							<td><input name="mail" id="mail"></td>
+							<td><input name="mail" id="mail" required pattern="([a-zA-Z0-9_\-\.]+)@([a-zA-Z0-9_\-\.]+)\.([a-zA-Z]{2,5})$"></td>
 						</tr>
 						<tr>
 							<td><label for="passw">Passwort</label></td>
-							<td><input  name="passw" id="passw"></td>
+							<td><input type="password" name="passw" id="passw" required pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}"></td>
 						</tr>
 						<tr>
 							<td><label for="passwrep">Passwort wiederholen</label></td>
-							<td><input  name="passwrep" id="passwrep"></td>
+							<td><input type="password" name="passwrep" id="passwrep" required pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}"></td>
 						</tr>
 					</table>
 					<fieldset>
