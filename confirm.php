@@ -1,5 +1,6 @@
 <?php
 	include "head.php";
+	include "validate.php";
 ?>
 		<main role="main">
 			<article>
@@ -21,11 +22,56 @@
 					$sector = $_GET['sector'];
 					$newsl = $_GET['newsl'];
 					
-
+					
+					if(!validateName($vorname)){
+						echo "$vorname not ok<br>";
+					}
+					if(!validateName($famname)){
+						echo "$famname not ok<br>";
+					}
+					if(!validateAdress($adresse)){
+						echo "$adresse not ok<br>";
+					}
+					if(!validatePlz($plz)){
+						echo "$plz not ok<br>";
+					}
+					if(!validateOrt($ort)){
+						echo "$ort not ok<br>";
+					}
+					
+					if(!validateMail($mail)){
+						echo "$mail not ok<br>";
+					}
+					if(!validateBirthDate($gebdat)){
+						echo "$gebdat not ok<br>";
+					}
+					if($numbadult == NULL || $numbadult > 0 && $numbadult > 50){
+						echo "$numbadult not ok<br>";
+					}
+					
+					if(!checkage($agechild1)){
+						echo "$agechild1 not ok<br>";
+					}
+					if(!checkage($agechild2)){
+						echo "$agechild2 not ok<br>";
+					}
+					if(!checkage($agechild3)){
+						echo "$agechild3 not ok<br>";
+					}
+					if(!checkage($agechild4)){
+						echo "$agechild4 not ok<br>";
+					}
+					if(!checkage($agechild5)){
+						echo "$agechild5 not ok<br>";
+					}
+					
 					if($newsl == 'on'){
 						$newsl = true;
 					}else{
 						$newsl = false;
+					}
+					if($sector != 'vorne' && $sector != 'mitte' && $sector != 'hinten'){
+						echo "$sector not ok";
 					}
 
 					//Insert auf DB
@@ -40,7 +86,6 @@
 					// INSERT
 					$sql = "INSERT INTO `tobrunch` (`famname`, `vorname`, `adresse`, `plz`, `ort`, `mailadr`, `gebdat`, `numbadult`, `agechild1`, `agechild2`, `agechild3`, `agechild4`, `agechild5`, `sector`, `newsletter`)
 					VALUES ('$famname', '$vorname', '$adresse', '$plz', '$ort', '$mail', '$gebdat', '$numbadult', '$agechild1', '$agechild2', '$agechild3', '$agechild4', '$agechild5', '$sector', '$newsl')";
-					echo $sql;
 					if (mysqli_query($conn, $sql))
 					{
 						echo '

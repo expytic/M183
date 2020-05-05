@@ -1,5 +1,6 @@
 <?php
 	include "head.php";
+	include "validate.php";
 ?>
 		<main role="main">
 			<article>
@@ -12,6 +13,24 @@
 					$password = $_GET['passw'];
 					$passwrep = $_GET['passwrep'];
 					
+					if(!validateName($famname)){
+						echo "$famname not ok<br>";
+					}
+					if(!validateName($vorname)){
+						echo "$vorname not ok<br>";
+					}
+					if(!validateBirthDate($gebdat)){
+						echo "$gebdat not ok<br>";
+					}
+					if(!validateMail($username)){
+						echo "$username not ok<br>";
+					}
+					if(!validatePassword($password)){
+						echo "$password not ok<br>";
+					}
+					if($password != $passwrep){
+						echo "$passwrep not ok<br>";
+					}
 					//Insert auf DB
 					// Create connection
 					$conn = mysqli_connect('localhost', 'php_support', 'TgDId8ZQvkmpkyY7', 'doppelklang');
