@@ -30,20 +30,21 @@ SET time_zone = "+00:00";
 
 CREATE TABLE `tobrunch` (
   `id` int(11) NOT NULL,
-  `famname` varchar(255) NOT NULL,
-  `vorname` varchar(255) NOT NULL,
-  `adresse` varchar(255) NOT NULL,
-  `plzort` varchar(255) NOT NULL,
-  `mailadr` varchar(255) DEFAULT NULL,
+  `famname` varchar(50) NOT NULL,
+  `vorname` varchar(50) NOT NULL,
+  `adresse` varchar(50) NOT NULL,
+  `plz` int(8) NOT NULL,
+  `ort` varchar(50) NOT NULL,
+  `mailadr` varchar(50) DEFAULT NULL,
   `gebdat` DATE NOT NULL,
-  `numbadult` varchar(255) NOT NULL DEFAULT '0',
-  `agechild1` varchar(255) DEFAULT '0',
-  `agechild2` varchar(255) DEFAULT '0',
-  `agechild3` varchar(255) DEFAULT '0',
-  `agechild4` varchar(255) DEFAULT '0',
-  `agechild5` varchar(255) DEFAULT '0',
-  `sector` varchar(255) NOT NULL DEFAULT '0',
-  `newsletter` varchar(255) NOT NULL DEFAULT '0',
+  `numbadult` int(8) NOT NULL DEFAULT '0',
+  `agechild1` int(8) DEFAULT '0',
+  `agechild2` int(8) DEFAULT '0',
+  `agechild3` int(8) DEFAULT '0',
+  `agechild4` int(8) DEFAULT '0',
+  `agechild5` int(8) DEFAULT '0',
+  `sector` varchar(10) NOT NULL DEFAULT '0',
+  `newsletter` boolean NOT NULL DEFAULT FALSE,
   `entrydatetime` datetime NOT NULL DEFAULT current_timestamp()
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
@@ -51,10 +52,11 @@ CREATE TABLE `tobrunch` (
 -- Daten für Tabelle `tobrunch`
 --
 
-INSERT INTO `tobrunch` (`id`, `famname`, `vorname`, `adresse`, `plzort`, `mailadr`, `gebdat`, `numbadult`, `agechild1`, `agechild2`, `agechild3`, `agechild4`, `agechild5`, `sector`, `newsletter`, `entrydatetime`) VALUES
-(28, 'Griti', 'Bänz', 'in der Au', '8804 Au', 'griti@baenz.ch', '12.12.1212', '7', '9', '8', '7', '6', '5', 'mitte', 'on', '2020-03-28 19:19:15'),
-(29, 'Schacher', 'Sepp', 'Hof', '8767 Elm', 'sepp@schacher.ch', '10.10.1900', '9', '14', '13', '12', '11', '10', 'vorne', '', '2020-03-28 19:21:47'),
-(35, 'Pareto', 'Nevio Enrico', 'Auweg 88', '8865 Elm', 'nepareto@bluelose.ch', '15.04.1991', '8', '5', '3', '', '', '', 'mitte', '', '2020-03-30 12:24:14');
+
+INSERT INTO `tobrunch` (`id`, `famname`, `vorname`, `adresse`, `plz`, `ort`, `mailadr`, `gebdat`, `numbadult`, `agechild1`, `agechild2`, `agechild3`, `agechild4`, `agechild5`, `sector`, `newsletter`, `entrydatetime`) VALUES
+(28, 'Griti', 'Bänz', 'in der Au', '8804', 'Au', 'griti@baenz.ch', '1212-12-12.', '7', '9', '8', '7', '6', '5', 'mitte', 'on', '2020-03-28 19:19:15'),
+(29, 'Schacher', 'Sepp', 'Hof', '8767', 'Elm', 'sepp@schacher.ch', '1900-10-10', '9', '14', '13', '12', '11', '10', 'vorne', '', '2020-03-28 19:21:47'),
+(35, 'Pareto', 'Nevio Enrico', 'Auweg 88', '8865', 'Elm', 'nepareto@bluelose.ch', '1991-04-15', '8', '5', '3', '', '', '', 'mitte', '', '2020-03-30 12:24:14');
 
 --
 -- Indizes der exportierten Tabellen

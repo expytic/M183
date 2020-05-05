@@ -8,7 +8,8 @@
 					$famname = $_GET['famname'];
 					$vorname = $_GET['vorname'];
 					$adresse = $_GET['adresse'];
-					$plzort = $_GET['plzort'];
+					$plz = $_GET['plz'];
+					$ort = $_GET['ort'];
 					$mail = $_GET['mail'];
 					$gebdat = $_GET['gebdat'];
 					$numbadult = $_GET['numbadult'];
@@ -20,6 +21,13 @@
 					$sector = $_GET['sector'];
 					$newsl = $_GET['newsl'];
 					
+
+					if($newsl == 'on'){
+						$newsl = true;
+					}else{
+						$newsl = false;
+					}
+
 					//Insert auf DB
 					// Create connection
 					$conn = mysqli_connect('localhost', 'php_register_writer', 'uQR5KuiUIQptdlCG', 'doppelklang');
@@ -30,8 +38,9 @@
 						die("Verbindung zur Datenbank leider fehlgeschlagen. Bitte versuchen Sie es später noch einmal: " . mysqli_connect_error());
 					}
 					// INSERT
-					$sql = "INSERT INTO `tobrunch` (`famname`, `vorname`, `adresse`, `plzort`, `mailadr`, `gebdat`, `numbadult`, `agechild1`, `agechild2`, `agechild3`, `agechild4`, `agechild5`, `sector`, `newsletter`)
-					VALUES ('$famname', '$vorname', '$adresse', '$plzort', '$mail', '$gebdat', '$numbadult', '$agechild1', '$agechild2', '$agechild3', '$agechild4', '$agechild5', '$sector', '$newsl')";
+					$sql = "INSERT INTO `tobrunch` (`famname`, `vorname`, `adresse`, `plz`, `ort`, `mailadr`, `gebdat`, `numbadult`, `agechild1`, `agechild2`, `agechild3`, `agechild4`, `agechild5`, `sector`, `newsletter`)
+					VALUES ('$famname', '$vorname', '$adresse', '$plz', '$ort', '$mail', '$gebdat', '$numbadult', '$agechild1', '$agechild2', '$agechild3', '$agechild4', '$agechild5', '$sector', '$newsl')";
+					echo $sql;
 					if (mysqli_query($conn, $sql))
 					{
 						echo '
@@ -48,7 +57,10 @@
 								<th>Adresse:</th><td>'.$adresse.'</td>
 							</tr>
 							<tr>
-								<th>PLZ / Ort:</th><td>'.$plzort.'</td>
+								<th>Plz:</th><td>'.$plz.'</td>
+							</tr>
+							<tr>
+								<th>Ort:</th><td>'.$ort.'</td>
 							</tr>
 							<tr>
 								<th>E-Mail:</th><td>'.$mail.'</td>

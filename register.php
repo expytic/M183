@@ -23,8 +23,12 @@
 							<td><input name="adresse" id="adresse"></td>
 						</tr>
 						<tr>
-							<td><label for="plzort">PLZ und Ort</label></td>
-							<td><input name="plzort" id="plzort"></td>
+							<td><label for="plz">PLZ</label></td>
+							<td><input name="plz" id="plz"></td>
+						</tr>
+						<tr>
+							<td><label for="ort">Ort</label></td>
+							<td><input name="ort" id="ort"></td>
 						</tr>
 						<tr>
 							<td><label for="mail">E-Mail Adresse</label></td>
