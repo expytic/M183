@@ -4,12 +4,16 @@ a {
     margin: 10px auto;
 }
 
+body {
+    background-color: black;
+    text-align: center;
+}
+
 table,
 hr {}
 
 input {
-    margin: 0 0 1em .2em;
-    width: 50%;
+    width: 100%;
 }
 
 fieldset {
@@ -32,13 +36,11 @@ section,
 aside,
 footer {
     font-family: 'Roboto', sans-serif;
+    text-align: center;
 }
 
-header {}
-
-nav {
-    background: #fffbf0;
-    border-color: #e7c157;
+header {
+    text-align: center;
 }
 
 section {}
