@@ -6,6 +6,24 @@
 			<article>
 				<?php
 					//Daten entgegennehmen
+					if(!isset($_GET['famname'])){
+						header('Location: registersup.php');
+					}
+					if(!isset($_GET['vorname'])){
+						header('Location: registersup.php');
+					}
+					if(!isset($_GET['gebdat'])){
+						header('Location: registersup.php');
+					}
+					if(!isset($_GET['mail'])){
+						header('Location: registersup.php');
+					}
+					if(!isset($_GET['passw'])){
+						header('Location: registersup.php');
+					}
+					if(!isset($_GET['passwrep'])){
+						header('Location: registersup.php');
+					}
 					$famname = $_GET['famname'];
 					$vorname = $_GET['vorname'];
 					$gebdat = $_GET['gebdat'];
