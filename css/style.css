@@ -8,20 +8,43 @@
 
 body {
     padding-left: 20px;
+    background-color: rgb(236, 205, 175);
+    margin: auto;
 }
 
 li a {
     display: block;
-    color: white;
+    color: rgb(224, 194, 155);
     text-align: center;
     padding: 14px 16px;
     text-decoration: none;
 }
 
 li a:hover {
-    background-color: rgb(170, 169, 169);
+    background-color: rgb(206, 182, 137);
+}
+
+fieldset,
+a {
+    width: 400px;
+    margin: auto;
+    text-align: left;
 }
 
 footer {
-    position: bottom;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    text-align: center;
+}
+
+li {
+    list-style-type: none;
+}
+
+img {
+    display: center;
+    max-width: 500px;
+    max-height: 450px;
+    text-align: center;
 }
