@@ -70,10 +70,10 @@
 						</table>
 					</fieldset>
 					<fieldset>
-						<table>
+						
 							<legend>Sitzplatz-Sektor, Newsletter, Anmeldung</legend>
-							<tr>
-								<td>
+							
+								
 									<label>Sitzplatz-Sektor:
 										<select name="sector" size="1">
 											<option>vorne</option>
@@ -81,13 +81,13 @@
 											<option>hinten</option>
 										</select>
 									</label>
-								</td>		
-								<td><input type="checkbox" name="newsl">Newsletter bestellen |</label></td>
-								<td><button type="submit" name="send" value="0">abschicken</button></td>
-								<td><button type="reset" name="send" value="0">neu ausfüllen</button></td>
-								<td><a href="index.php" titel="| zurück zur Startseite |">| zurück zur Startseite |</a></td>
-							</tr>
-						</table>
+										
+								<input type="checkbox" name="newsl">Newsletter bestellen |</label><br>
+								<button type="submit" name="send" value="0">send</button>
+								<button type="reset" name="send" value="0">reset</button>
+								<a href="index.php" titel="| zurück zur Startseite |">| zurück zur Startseite |</a>
+							
+						
 					</fieldset>
 				</form>	
 			</article>

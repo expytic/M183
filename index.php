@@ -1,7 +1,9 @@
 		<?php
 			include "head.php";
 		?>
+		
 		<main>
+		
 			<p>
 				<h4>Music-Brunch mit Doppelklang - ein Sonntagserlebnis der besonderen Art!</h4>
 				<hr>
@@ -13,10 +15,11 @@
 				<a href="login-showregs.php" title="alle Anmeldungen anzeigen">alle Anmeldungen anzeigen</a> (nur mit Admin-Login)<br>
 				<a href="login-adminregs.php" title="Anmeldungen administrieren">Anmeldungen administrieren</a> (nur mit AdminPlus-Login)<br>
 				<hr>
+				<img src="img/bbrunch.jpg" >
 			</p>
 		</main> 
 		<footer>
-			<a href="#kontakt.html">Kontakt</a>
+		<hr><a href="#kontakt.html">Kontakt</a>
 				<p>© 2020 Doppelklang / 03.2020 BigBand Doppelklang</p>
 				<script src="js/bootstrap.min.js">
 		</footer>
