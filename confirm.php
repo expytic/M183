@@ -102,17 +102,27 @@
 
 					//Insert auf DB
 					// Create connection
-					$conn = mysqli_connect('localhost', 'php_register_writer', 'uQR5KuiUIQptdlCG', 'doppelklang');
-					mysqli_set_charset($conn, "utf8");
+					$conn = new PDO('mysql:host=localhost;dbname=doppelklang', 'php_register_writer', 'uQR5KuiUIQptdlCG');
+					//mysqli_set_charset($conn, "utf8");
 					// Check connection
 					if (!$conn)
 					{
 						die("Verbindung zur Datenbank leider fehlgeschlagen. Bitte versuchen Sie es später noch einmal: " . mysqli_connect_error());
 					}
 					// INSERT
-					$sql = "INSERT INTO `tobrunch` (`famname`, `vorname`, `adresse`, `plz`, `ort`, `mailadr`, `gebdat`, `numbadult`, `agechild1`, `agechild2`, `agechild3`, `agechild4`, `agechild5`, `sector`, `newsletter`)
-					VALUES ('$famname', '$vorname', '$adresse', '$plz', '$ort', '$mail', '$gebdat', '$numbadult', '$agechild1', '$agechild2', '$agechild3', '$agechild4', '$agechild5', '$sector', '$newsl')";
-					if (mysqli_query($conn, $sql))
+					$stmt = $conn->prepare("INSERT INTO `tobrunch` (`famname`, `vorname`, `adresse`, `plz`, `ort`, `mailadr`, `gebdat`, `numbadult`,
+					 `agechild1`, `agechild2`, `agechild3`, `agechild4`, `agechild5`, `sector`, `newsletter`)
+					VALUES(?, ?, ?, ?, ? , ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)");
+					
+					$result = $stmt->execute(array($famname, 
+					$vorname, $adresse, 
+					$plz, $ort, $mail, 
+					$gebdat, $numbadult, 
+					$agechild1, $agechild2, 
+					$agechild3, $agechild4, 
+					$agechild5, $sector, $newsl));
+
+					if ($result)
 					{
 						echo '
 						<h4>herzlichen Dank für deine Anmeldung!</h4>
@@ -195,7 +205,7 @@
 					{
 						echo "Verbindung zur Datenbank leider fehlgeschlagen. Bitte versuchen Sie es später noch einmal: " . $sql . "<br>" . mysqli_error($conn);
 					}
-					mysqli_close($conn);
+					$conn = null;
 					?>
 			</article>
 		</main>

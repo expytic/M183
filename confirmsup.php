@@ -51,17 +51,18 @@
 					}
 					//Insert auf DB
 					// Create connection
-					$conn = mysqli_connect('localhost', 'php_support', 'TgDId8ZQvkmpkyY7', 'doppelklang');
-					mysqli_set_charset($conn, "utf8");
+					$conn = new PDO('mysql:host=localhost;dbname=doppelklang', 'php_support', 'TgDId8ZQvkmpkyY7');
 					// Check connection
 					if (!$conn)
 					{
 						die("Verbindung zur Datenbank leider fehlgeschlagen. Bitte versuchen Sie es später noch einmal: " . mysqli_connect_error());
 					}
 					// INSERT
+					$stmt = $conn->prepare("INSERT INTO `tosupport` (`famname`, `vorname`, `gebdat`, `username`, `password`) VALUES (?, ?, ?, ?, ?)");
 					$sql = "INSERT INTO `tosupport` (`famname`, `vorname`, `gebdat`, `username`, `password`)
 					VALUES ('$famname', '$vorname', '$gebdat', '$username', '$password')";
-					if (mysqli_query($conn, $sql))
+					$result = $stmt->execute(array($famname, $vorname, $gebdat, $username, $password));
+					if ($result)
 					{
 						echo '
 						<h4>vielen Dank und herzlich willkommen als Supporter*in!</h4>
@@ -88,7 +89,7 @@
 					{
 						echo "Verbindung zur Datenbank leider fehlgeschlagen. Bitte versuchen Sie es später noch einmal: " . $sql . "<br>" . mysqli_error($conn);
 					}
-					mysqli_close($conn);
+					$conn = null;
 					?>
 			</article>
 		</main>
