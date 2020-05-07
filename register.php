@@ -12,7 +12,7 @@
 						<legend><b>Anmeldeformular - </b>Persönliche Angaben:</legend>
 						<tr>
 							<td><label for="famname">Familienname</label></td>
-							<td><input name="famname" id="famname" required pattern="[a-zA-ZàáâäãåąčćęèéêëėįìíîïłńòóôöõøùúûüųūÿýżźñçčšžÀÁÂÄÃÅĄĆČĖĘÈÉÊËÌÍÎÏĮŁŃÒÓÔÖÕØÙÚÛÜŲŪŸÝŻŹÑßÇŒÆČŠŽ∂ð .-]{1,40}"></td>
+							<td><input name="famname" id="famname" autofocus required pattern="[a-zA-ZàáâäãåąčćęèéêëėįìíîïłńòóôöõøùúûüųūÿýżźñçčšžÀÁÂÄÃÅĄĆČĖĘÈÉÊËÌÍÎÏĮŁŃÒÓÔÖÕØÙÚÛÜŲŪŸÝŻŹÑßÇŒÆČŠŽ∂ð .-]{1,40}"></td>
 						</tr>
 						<tr>
 							<td><label for="vorname">Vorname</label></td>
