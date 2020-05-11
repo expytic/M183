@@ -19,8 +19,8 @@
 			</p>
 		</main> 
 		<footer>
-		<hr><a href="#kontakt.html">Kontakt</a>
-				<p>© 2020 Doppelklang / 03.2020 BigBand Doppelklang</p>
+		<hr><a href="kontakt.html">Kontakt</a>
+				<b><p>© 2020 Doppelklang / 03.2020 BigBand Doppelklang</p></b>
 				<script src="js/bootstrap.min.js">
 		</footer>
 	</body>

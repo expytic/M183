@@ -2,7 +2,7 @@
 <html>
 	<head>
     <meta charset="utf-8">
-    <link rel="stylesheet" href="css/bootstrap.css">
+	<link rel="stylesheet" href="css/bootstrap.css">
     <style>
         <?php 
             include 'css/style.css'; 
@@ -31,7 +31,7 @@
 				<a class="nav-link" href="registersup.php">Werde Supporter</a>
 			</li>
 			<li class="nav-item active">
-				<a class="nav-link" href="#">Kontakt</a>
+				<a class="nav-link" href="kontakt.html">Kontakt</a>
             </li>
             <?php
 				session_start();

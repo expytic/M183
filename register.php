@@ -1,5 +1,6 @@
 <?php
 	include "head.php";
+	
 ?>
 	<main>
 		<article>
@@ -84,7 +85,7 @@
 										
 								<input type="checkbox" name="newsl">Newsletter bestellen |</label><br>
 								<button type="submit" name="send" value="0">send</button>
-								<button type="reset" name="send" value="0">reset</button>
+								<button type="reset" name="send" value="0">reset</button><br>
 								<a href="index.php" titel="| zurück zur Startseite |">| zurück zur Startseite |</a>
 							
 						
@@ -100,7 +101,7 @@
 		</main>
  
 		<footer>		
-			<a href="#kontakt.html">Kontakt</a>
+			<a href="kontakt.html">Kontakt</a>
 			<p>© 2020 Doppelklang / 03.2020 BigBand Doppelklang</p>
 		</footer>
 	</body>

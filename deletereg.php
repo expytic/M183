@@ -76,7 +76,7 @@
 		</main> 
 		
 		<footer>
-			<a href="#kontakt.html">Kontakt</a>
+			<a href="kontakt.html">Kontakt</a>
 				<p>© 2020 Doppelklang / 03.2020 BigBand Doppelklang</p>
 		</footer>
 	</body>
