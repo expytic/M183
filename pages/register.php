@@ -1,6 +1,5 @@
 <?php
-	include "head.php";
-	
+	include_once "../includes/head.php";	
 ?>
 	<main>
 		<article>
@@ -101,7 +100,7 @@
 		</main>
  
 		<footer>		
-			<a href="kontakt.html">Kontakt</a>
+			<a href="kontakt.php">Kontakt</a>
 			<p>© 2020 Doppelklang / 03.2020 BigBand Doppelklang</p>
 		</footer>
 	</body>

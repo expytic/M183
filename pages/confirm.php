@@ -1,6 +1,6 @@
 <?php
-	include "head.php";
-	include "validate.php";
+	include "../includes/head.php";
+	include "../includes/validate.php";
 ?>
 		<main role="main">
 			<article>

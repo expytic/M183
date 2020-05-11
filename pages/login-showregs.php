@@ -1,5 +1,5 @@
 <?php
-	include "head.php";
+	include "../includes/head.php";
 	if(isset($_SESSION['Admin']) && $_SESSION['Admin']){
 		header('Location: ./showregs.php');
 		exit;
@@ -44,7 +44,7 @@
  
 		<footer>
 <hr>		
-			<a href="kontakt.html">Kontakt</a>
+			<a href="kontakt.php">Kontakt</a>
 				<p>© 2020 Doppelklang / 03.2020 BigBand Doppelklang</p>
 		</footer>
 	</body>
