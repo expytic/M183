@@ -85,7 +85,7 @@
 								<input type="checkbox" name="newsl">Newsletter bestellen |</label><br>
 								<button type="submit" name="send" value="0">send</button>
 								<button type="reset" name="send" value="0">reset</button><br>
-								<a href="index.php" titel="| zurück zur Startseite |">| zurück zur Startseite |</a>
+								<a href="../index.php" titel="| zurück zur Startseite |">| zurück zur Startseite |</a>
 							
 						
 					</fieldset>
@@ -99,9 +99,6 @@
 				</ul>
 		</main>
  
-		<footer>		
-			<a href="kontakt.php">Kontakt</a>
-			<p>© 2020 Doppelklang / 03.2020 BigBand Doppelklang</p>
-		</footer>
-	</body>
-</html>
+		<?php
+			include_once "../includes/footer.php";
+		?>

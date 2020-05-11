@@ -18,10 +18,8 @@
 				<img src="img/bbrunch.jpg" >
 			</p>
 		</main> 
-		<footer>
-		<hr><a href="kontakt.php">Kontakt</a>
-				<b><p>© 2020 Doppelklang / 03.2020 BigBand Doppelklang</p></b>
-				<script src="js/bootstrap.min.js">
-		</footer>
-	</body>
-</html>
+		<?php
+			include_once "includes/footer.php";
+		?>
+
+		

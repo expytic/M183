@@ -1,5 +1,5 @@
 <?php
-	include "../includes/head.php";
+	include_once "../includes/head.php";
 ?>
 	<main>
 		<article>
@@ -41,17 +41,13 @@
 							<legend></legend>
 								<td><button type="submit" name="send" value="0">Registrieren</button></td>
 								<td><button type="reset" name="send" value="0">neu ausfüllen</button></td>
-								<td><a href="index.php" titel=" | zurück zur Startseite |">| zurück zur Startseite |</a></td>
+								<td><a href="../index.php" titel=" | zurück zur Startseite |">| zurück zur Startseite |</a></td>
 							</tr>
 						</table>
 					</fieldset>
 				</form>	
 			</article>
 		</main>
-		<footer>
-<hr>		
-			<a href="kontakt.php">Kontakt</a>
-				<p>© 2020 Doppelklang / 03.2020 BigBand Doppelklang</p>
-		</footer>
-	</body>
-</html>
+		<?php
+			include_once "../includes/footer.php";
+		?>

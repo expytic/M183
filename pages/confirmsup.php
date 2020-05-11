@@ -1,6 +1,6 @@
 <?php
-	include "../includes/head.php";
-	include "../includes/validate.php";
+	include_once "../includes/head.php";
+	include_once "../includes/validate.php";
 ?>
 		<main role="main">
 			<article>
@@ -89,10 +89,6 @@
 					?>
 			</article>
 		</main>
-		<footer>
-	<hr>
-			| <a href="index.php">zurück zur Startseite</a>|
-			<hr>
-		</footer>
-	</body>
-</html>
+		<?php
+			include_once "../includes/footer.php";
+		?>

@@ -1,5 +1,5 @@
 <?php
-	include "../includes/head.php";
+	include_once "../includes/head.php";
 	if(isset($_SESSION['AdminPlus']) && $_SESSION['AdminPlus']){
 		header('Location: ./adminregs.php');
 		exit;
@@ -42,10 +42,6 @@
 			</article>
 		</main> 
  
-		<footer>
-<hr>		
-			<a href="kontakt.php">Kontakt</a>
-				<p>© 2020 Doppelklang / 03.2020 BigBand Doppelklang</p>
-		</footer>
-	</body>
-</html>
+		<?php
+			include_once "../includes/footer.php";
+		?>
