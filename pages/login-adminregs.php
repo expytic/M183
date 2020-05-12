@@ -36,7 +36,7 @@
 				</form>	
 			</article>
 		<p>
-				<a href="index.php" title="zur Startseite">zur Startseite</a><br>
+				<a href="../index.php" title="zur Startseite">zur Startseite</a><br>
 				<hr>
 			</p>
 			</article>
