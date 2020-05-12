@@ -21,27 +21,27 @@
 					$passwrep = $_POST['passwrep'];
 					$dataIsOk = true;
 					if(!validateName($famname)){
-						echo "$famname not ok<br>";
+						echo "famname not ok<br>";
 						$dataIsOk = false;
 					}
 					if(!validateName($vorname)){
-						echo "$vorname not ok<br>";
+						echo "vorname not ok<br>";
 						$dataIsOk = false;
 					}
 					if(!validateBirthDate($gebdat)){
-						echo "$gebdat not ok<br>";
+						echo "Geburtsdatum not ok<br>";
 						$dataIsOk = false;
 					}
 					if(!validateMail($username)){
-						echo "$username not ok<br>";
+						echo "email not ok<br>";
 						$dataIsOk = false;
 					}
 					if(!validatePassword($password)){
-						echo "$password not ok<br>";
+						echo "passwort mit min 8 zeichen gross- kleinbuchstaben eine zahl und ein sonderzeichen.<br>";
 						$dataIsOk = false;
 					}
 					if($password != $passwrep){
-						echo "$passwrep not ok<br>";
+						echo "passwort stimmt nicht überein<br>";
 						$dataIsOk = false;
 					}
 

@@ -37,56 +37,56 @@
 					$sector = $_POST['sector'];
 					$dataIsOk = true;
 					if(!validateName($vorname)){
-						echo "$vorname not ok<br>";
+						echo "vorname not ok<br>";
 						$dataIsOk = false;
 					}
 					if(!validateName($famname)){
-						echo "$famname not ok<br>";
+						echo "famname not ok<br>";
 						$dataIsOk = false;
 					}
 					if(!validateAdress($adresse)){
-						echo "$adresse not ok<br>";
+						echo "adresse not ok<br>";
 						$dataIsOk = false;
 					}
 					if(!validatePlz($plz)){
-						echo "$plz not ok<br>";
+						echo "plz not ok<br>";
 						$dataIsOk = false;
 					}
 					if(!validateOrt($ort)){
-						echo "$ort not ok<br>";
+						echo "ort not ok<br>";
 						$dataIsOk = false;
 					}
 					
 					if(!validateMail($mail)){
-						echo "$mail not ok<br>";
+						echo "mail not ok<br>";
 						$dataIsOk = false;
 					}
 					if(!validateBirthDate($gebdat)){
-						echo "$gebdat not ok<br>";
+						echo "gebdat not ok<br>";
 						$dataIsOk = false;
 					}
 					if($numbadult == NULL || $numbadult > 0 && $numbadult > 50){
-						echo "$numbadult not ok<br>";
+						echo "numbadult not ok<br>";
 						$dataIsOk = false;
 					}
 					if(!checkage($agechild1)){
-						echo "$agechild1 not ok<br>";
+						echo "alter Kind 1 not ok<br>";
 						$dataIsOk = false;
 					}
 					if(!checkage($agechild2)){
-						echo "$agechild2 not ok<br>";
+						echo "alter Kind 2 not ok<br>";
 						$dataIsOk = false;
 					}
 					if(!checkage($agechild3)){
-						echo "$agechild3 not ok<br>";
+						echo "alter Kind 3 not ok<br>";
 						$dataIsOk = false;
 					}
 					if(!checkage($agechild4)){
-						echo "$agechild4 not ok<br>";
+						echo "alter Kind 4 not ok<br>";
 						$dataIsOk = false;
 					}
 					if(!checkage($agechild5)){
-						echo "$agechild5 not ok<br>";
+						echo "alter Kind 5 not ok<br>";
 						$dataIsOk = false;
 					}
 					
