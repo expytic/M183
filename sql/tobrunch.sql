@@ -43,7 +43,8 @@ CREATE TABLE `tobrunch` (
   `agechild3` int(8) DEFAULT '0',
   `agechild4` int(8) DEFAULT '0',
   `agechild5` int(8) DEFAULT '0',
-  `sector` varchar(10) NOT NULL,
+  
+  `sector` ENUM('vorne', 'mitte', 'hinten') NOT NULL,
   `newsletter` boolean NOT NULL DEFAULT FALSE,
   `entrydatetime` datetime NOT NULL DEFAULT current_timestamp()
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
