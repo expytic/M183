@@ -46,8 +46,6 @@
 					}
 
 					//TODO hash pw -> db
-					echo(password_hash('2malklang', PASSWORD_DEFAULT));
-					echo "<br>";
 					$password = password_hash($password, PASSWORD_DEFAULT);
 					//Insert auf DB
 					// Create connection

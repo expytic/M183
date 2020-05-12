@@ -42,7 +42,6 @@
       }else{
         $result = "false";
       }
-      echo $result . '<br>';
       echo '<p>Die Anmeldung von '. $vorname . '&nbsp;' . $famname . ' vom ' . $entrydatetime . ' wurde gelöscht.</p>';
     }
     else {
@@ -66,7 +65,7 @@
   }
 ?>  
  <p>
-				<a href="index.php" title="zur Startseite">zur Startseite</a><br>
+				<a href="../index.php" title="zur Startseite">zur Startseite</a><br>
 				<hr>
 				<a href="showregs.php" title="alle Anmeldungen anzeigen">alle Anmeldungen anzeigen</a> (nur mit Admin-Login)<br>
 				<a href="adminregs.php" title="Anmeldungen administrieren">Anmeldungen administrieren</a> (nur mit AdminPlus-Login)<br>

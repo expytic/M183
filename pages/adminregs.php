@@ -34,7 +34,7 @@
 						<input type="hidden" id="vorname" name="vorname" value="' . $zeile['vorname'] . '">
 						<input type="hidden" id="mailadr" name="mailadr" value="' . $zeile['mailadr'] . '">
 						<input type="hidden" id="entrydatetime" name="entrydatetime" value="' . $zeile['entrydatetime'] . '">
-						<button type="submit" name="send" value="0">abschicken</button>
+						<button type="submit" name="send" value="0">löschen</button>
 						</form></td></tr>';
 				}
 				echo '</table>';
