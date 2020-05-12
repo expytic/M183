@@ -12,36 +12,26 @@
 		</p>	
 			<form name="login-showregs" action="checkadminregs.php" method="POST">
 				<fieldset>
-					<table>
-						<legend>AdminPlus-Login</legend>
-						<tr>
-							<td><label for="user">User:*</label></td>
-							<td><input type="text" name="user" id="user"/></td>
-						</tr>
-						<tr>
-							<td><label for="pass">Passwort:*</label></td>
-							<td><input type="password" name="pass" id="pass"
-							/></td>
-						</tr>
-						<tr>
-							<td>
-								<button type="submit" id="send">absenden</button>
-							</td>
-							<td>
-								<input type="reset" value="verwerfen" />
-							</td>
-						</tr>
-						</table>
-					</fieldset>
-				</form>	
-			</article>
-		<p>
+					<h2>AdminPlus-Login</h3>
+					<div class="form-group">
+						<label for="user">User:*</label>
+						<input class="form-control" type="text" name="user" id="user"/>
+					</div>
+					<div class="form-group">
+						<label for="pass">Passwort:*</label></td>
+						<input type="password" class="form-control" name="pass" id="pass"/>
+					</div>
+					<button type="submit" id="send" class="btn btn-primary">absenden</button>
+					<input type="reset" value="verwerfen" class="btn btn-danger"/>
+				</fieldset>
+			</form>	
+		</article>
+			<p>
 				<a href="../index.php" title="zur Startseite">zur Startseite</a><br>
 				<hr>
 			</p>
 			</article>
-		</main> 
- 
-		<?php
-			include_once "../includes/footer.php";
-		?>
+	</main> 
+	<?php
+		include_once "../includes/footer.php";
+	?>

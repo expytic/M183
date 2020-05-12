@@ -63,7 +63,7 @@
 						echo '
 						<h4>vielen Dank und herzlich willkommen als Supporter*in!</h4>
 						<h4>Folgende Angaben haben wir entgegengenommen:</h4>
-						<table>
+						<table class="table table-bordered">
 							<tr>
 								<th>Familienname:</th><td>'.$famname.'</td>
 							</tr>

@@ -7,41 +7,30 @@
 ?>
 	<main>
 		<article>
-		<p>
-			<h4>alle Anmeldungen anzeigen (nur mit Admin-Login)</h4>
-		</p>	
+			<p>
+				<h4>alle Anmeldungen anzeigen (nur mit Admin-Login)</h4>
+			</p>	
 			<form name="login-showregs" action="checkshowregs.php" method="POST">
 				<fieldset>
-					<table>
-						<legend>Admin-Login</legend>
-						<tr>
-							<td><label for="user">User:*</label></td>
-							<td><input type="text" name="user" id="user"/></td>
-						</tr>
-						<tr>
-							<td><label for="pass">Passwort:*</label></td>
-							<td><input type="password" name="pass" id="pass"
-							/></td>
-						</tr>
-						<tr>
-							<td>
-								<button type="submit" id="send">absenden</button>
-							</td>
-							<td>
-								<input type="reset" value="verwerfen" />
-							</td>
-						</tr>
-						</table>
-					</fieldset>
-				</form>	
-			</article>
-		<p>
+					<h3>Admin-Login</h3>
+					<div class="form-group">
+							<td><label for="user">User:*</label>
+							<td><input type="text" class="form-control" name="user" id="user"/>
+					</div>
+					<div class="form-group">
+						<td><label for="pass">Passwort:*</label>
+						<td><input type="password" class="form-control" name="pass" id="pass"/>
+					</div>
+					<button type="submit" class="btn btn-primary" id="send">absenden</button>
+					<input type="reset" class="btn btn-danger" value="verwerfen" />
+				</fieldset>
+			</form>	
+			<p>
 				<a href="../index.php" title="zur Startseite">zur Startseite</a><br>
-				<hr>
 			</p>
-			</article>
-		</main> 
+		</article>
+	</main> 
  
-		<?php
-			include_once "../includes/footer.php";
-		?>
+	<?php
+		include_once "../includes/footer.php";
+	?>

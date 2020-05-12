@@ -4,6 +4,7 @@
 		<main>
 			<p>
 				<h4>Music-Brunch mit Doppelklang - Anmeldungen anzeigen</h4>
+
 				<?php
 				if (isset($_SESSION['Admin']) && $_SESSION['Admin'])
 				{
@@ -20,7 +21,28 @@
 						if ($ergebnis = mysqli_query($db, $sql))
 						{		
 							// Ausgabe der Ergebnisse in HTML
-							echo '<table border="1"\n>';
+							echo '<table class="table centeredbox">';
+							echo '<thead class="thead-dark">';
+							echo '<tr>';
+							echo '<th scope="col">ID</th>';
+							echo '<th scope="col">Nachname</th>';
+							echo '<th scope="col">Vorname</th>';
+							echo '<th scope="col">Strasse</th>';
+							echo '<th scope="col">PLZ</th>';
+							echo '<th scope="col">Ort</th>';
+							echo '<th scope="col">E-Mail</th>';
+							echo '<th scope="col">Geburtsdatum</th>';
+							echo '<th scope="col">Anzahl Erwachsene</th>';
+							echo '<th scope="col">Kind 1</th>';
+							echo '<th scope="col">Kind 2</th>';
+							echo '<th scope="col">Kind 3</th>';
+							echo '<th scope="col">Kind 4</th>';
+							echo '<th scope="col">Kind 5</th>';
+							echo '<th scope="col">Sitz</th>';
+							echo '<th scope="col">Newsletter</th>';
+							echo '<th scope="col">erstelldatum</th>';
+							echo '</tr>';
+							echo '</thead>';
 							while ($line = mysqli_fetch_array($ergebnis, MYSQLI_ASSOC))
 							{
 								echo "\t<tr>\n";

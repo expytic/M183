@@ -44,3 +44,10 @@ img {
     max-height: 450px;
     text-align: center;
 }
+
+.centeredbox{
+    border: 1px;
+    width: 400px;
+    margin: auto;
+    background-color: white;
+}

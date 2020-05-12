@@ -92,7 +92,7 @@
 					
 					
 					if($sector != 'vorne' && $sector != 'mitte' && $sector != 'hinten') {
-						echo "$sector not ok<br>";
+						echo "sector not ok<br>";
 						$dataIsOk = false;
 					}
 					//Insert auf DB
@@ -111,7 +111,7 @@
 						echo '
 						<h4>herzlichen Dank für deine Anmeldung!</h4>
 						<h4>Folgende Angaben haben wir entgegengenommen:</h4>
-						<table>
+						<table class="table table-bordered">
 							<tr>
 								<th>Familienname:</th><td>'.$famname.'</td>
 							</tr>

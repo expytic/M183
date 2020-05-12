@@ -21,7 +21,16 @@
 				$daten = mysqli_query($db, $sql);
 
 				// Die Daten durchlaufen und als HTML formatieren
-				echo "<table class=\"table table-bordered\">";
+				echo '<table class="table centeredbox">';
+				echo '<thead class="thead-dark">';
+				echo '<tr>';
+				echo '<th scope="col">Name</th>';
+				echo '<th scope="col">Vorname</th>';
+				echo '<th scope="col">E-Mail</th>';
+				echo '<th scope="col">Anmeldedatum</th>';
+				echo '<th scope="col">Entfernen</th>';
+				echo '</tr>';
+				echo '</thead>';
 				while ($zeile = mysqli_fetch_array($daten)) { 
 					// Die Anmelde-Daten anzeigen
 					echo "<tr><td><strong>" . $zeile['famname'] . '</strong></td>';
@@ -38,7 +47,6 @@
 						</form></td></tr>';
 				}
 				echo '</table>';
-
 				mysqli_close($db);
 			}
 			else
