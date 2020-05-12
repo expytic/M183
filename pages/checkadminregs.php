@@ -8,7 +8,8 @@ session_start();
 	$pass = $_POST['pass'];
 	
 	//V erarbeitung
-	if ($user == "2kadminplus" && $pass == "2malklang"){
+	$pw = '$2y$10$jk841nKrUzKomb2hKvpOGORkYjqMMGJh1qpUa2t1THKvULXIwr/A6';
+	if ($user == "2kadminplus" && password_verify($pass, $pw)){
 		$_SESSION['AdminPlus'] = true;
 		header('Location: ./adminregs.php');
 	}else{

@@ -8,7 +8,8 @@ session_start();
 	$pass = $_POST['pass'];
 			
 	//V erarbeitung
-	if ($user == "2klangadmin" && $pass == "2klang2klang")	{
+	$pw = '$2y$10$jLc1kT2yklowtJ.47YMyf.yOjx9p/RhgXKhcPXOGFY5c5s3bZkuhO';
+	if ($user == "2klangadmin" && password_verify($pass, $pw))	{
 		$_SESSION['Admin'] = true;
 		header('Location: ./showregs.php');
 	}else{

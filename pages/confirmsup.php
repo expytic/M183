@@ -44,6 +44,11 @@
 						echo "$passwrep not ok<br>";
 						$dataIsOk = false;
 					}
+
+					//TODO hash pw -> db
+					echo(password_hash('2malklang', PASSWORD_DEFAULT));
+					echo "<br>";
+					$password = password_hash($password, PASSWORD_DEFAULT);
 					//Insert auf DB
 					// Create connection
 					$conn = new PDO('mysql:host=localhost;dbname=doppelklang', 'php_support', 'TgDId8ZQvkmpkyY7');
@@ -54,11 +59,9 @@
 					$result = false;
 					if($dataIsOk){
 						$stmt = $conn->prepare("INSERT INTO `tosupport` (`famname`, `vorname`, `gebdat`, `username`, `password`) VALUES (?, ?, ?, ?, ?)");
-						$sql = "INSERT INTO `tosupport` (`famname`, `vorname`, `gebdat`, `username`, `password`)
-						VALUES ('$famname', '$vorname', '$gebdat', '$username', '$password')";
 						$result = $stmt->execute(array($famname, $vorname, $gebdat, $username, $password));
 					}
-					if ($result && $dataIsOk)
+					if ($result && $dataIsOk){
 						echo '
 						<h4>vielen Dank und herzlich willkommen als Supporter*in!</h4>
 						<h4>Folgende Angaben haben wir entgegengenommen:</h4>
@@ -70,13 +73,10 @@
 								<th>Vorname:</th><td>'.$vorname.'</td>
 							</tr>
 							<tr>
-								<th>Adresse:</th><td>'.$gebdat.'</td>
+								<th>Geburtsdatum:</th><td>'.$gebdat.'</td>
 							</tr>
 							<tr>
-								<th>PLZ / Ort:</th><td>'.$username.'</td>
-							</tr>
-							<tr>
-								<th>E-Mail:</th><td>'.$password.'</td>
+								<th>E-mail:</th><td>'.$username.'</td>
 							</tr>
 							</table>';
 					}

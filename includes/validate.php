@@ -5,17 +5,14 @@ function validatePassword($password){
     $number    = preg_match('@[0-9]@', $password);
     $specialChars = preg_match('@[^\w]@', $password);
     
-    if(!$uppercase || !$lowercase || !$number || !$specialChars || strlen($password) < 8) {
-        return false;
-    }else{
-        return true;
-    }
+    if(!$uppercase || !$lowercase || !$number || !$specialChars || strlen($password) < 8) return false;
+    return true;
 }
 
 
 
 function validateName($name){
-    if(preg_match_all('/^[a-zA-ZàáâäãåąčćęèéêëėįìíîïłńòóôöõøùúûüųūÿýżźñçčšžÀÁÂÄÃÅĄĆČĖĘÈÉÊËÌÍÎÏĮŁŃÒÓÔÖÕØÙÚÛÜŲŪŸÝŻŹÑßÇŒÆČŠŽ∂ð .-]{1,40}+$/u', $name)){
+    if(preg_match_all('/^[a-zA-ZàáâäãåąčćęèéêëėįìíîïłńòóôöõøùúûüųūÿýżźñçčšžÀÁÂÄÃÅĄĆČĖĘÈÉÊËÌÍÎÏĮŁŃÒÓÔÖÕØÙÚÛÜŲŪŸÝŻŹÑßÇŒÆČŠŽ∂ð .-]{1,50}+$/u', $name)){
         return true;
     }
     return false;

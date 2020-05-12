@@ -34,7 +34,7 @@ CREATE TABLE `tosupport` (
   `vorname` varchar(50) NOT NULL,
   `gebdat` DATE NOT NULL,
   `username` varchar(20) NOT NULL,
-  `password` varchar(32) NOT NULL,
+  `password` varchar(255) NOT NULL,
   `entrydatetime` datetime NOT NULL DEFAULT current_timestamp()
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
@@ -43,7 +43,8 @@ CREATE TABLE `tosupport` (
 --
 
 INSERT INTO `tosupport` (`id`, `famname`, `vorname`, `gebdat`, `username`, `password`, `entrydatetime`) VALUES
-(1, 'Gmür', 'Heinrich', '16. Juli 1980', 'g.gmuer27@gmail.com', 'sackundbaendel', '2020-03-30 12:19:32');
+(1, 'Gmür', 'Heinrich', '16. Juli 1980', 'g.gmuer27@gmail.com', '$2y$10$YL5FiWWRSzxHMQAgvaJ1JOCFtynmWD53BAQBXLepo9HRRSD.G53e2', '2020-03-30 12:19:32');
+--ungehashtes pw: "sackundbaendel"
 
 --
 -- Indizes der exportierten Tabellen
